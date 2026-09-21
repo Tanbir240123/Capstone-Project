@@ -1,5 +1,22 @@
 import pandas as pd
+def create_product_summary(df):
+    return (
+        df.groupby(["StockCode", "Description"], as_index=False)
+        .agg(
+            TotalQuantity=("Quantity", "sum"),
+            TotalSales=("TotalSales", "sum"),
+            Transactions=("InvoiceNo", "nunique"), )
+        .sort_values("TotalSales", ascending=False))
 
+def create_customer_summary(df):
+    return (
+        df.groupby("CustomerID", as_index=False)
+        .agg(
+            TotalOrders=("InvoiceNo", "nunique"),
+            TotalQuantity=("Quantity", "sum"),
+            TotalSales=("TotalSales", "sum"),
+        )
+        .sort_values("TotalSales", ascending=False))
 REQUIRED_COLS = [
     "InvoiceNo", "StockCode", "Description", "Quantity",
     "InvoiceDate", "UnitPrice", "CustomerID", "Country"
@@ -53,31 +70,137 @@ def clean_data(df):
     return df
 
 def transform_data(df):
-    # Coerce dynamic types
+    # Extract date and monthly time periods for easy grouping
+    df = df.copy()
+
+    # Convert data types first
     df["Quantity"] = pd.to_numeric(df["Quantity"], errors="coerce")
     df["UnitPrice"] = pd.to_numeric(df["UnitPrice"], errors="coerce")
     df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"], errors="coerce")
 
-    # Drop unparseable records
+    # Remove invalid records
     df = df.dropna(subset=["Quantity", "UnitPrice", "InvoiceDate"])
 
-    # Add calculated columns
-    df["IsReturn"] = df["InvoiceNo"].str.startswith("C") | (df["Quantity"] < 0)
+    # Calculate sales information
+    df["IsReturn"] = (
+    df["InvoiceNo"].astype(str).str.startswith("C")
+        | (df["Quantity"] < 0)
+    )
     df["TotalSales"] = df["Quantity"] * df["UnitPrice"]
 
-    # Extract date parts
-    dates = df["InvoiceDate"].dt
-    df["Year"] = dates.year
-    df["Month"] = dates.month
-    df["MonthName"] = dates.month_name()
-    df["Day"] = dates.day
-    df["Hour"] = dates.hour
+    # Create date columns
+    df["SaleDate"] = df["InvoiceDate"].dt.date
+    df["YearMonth"] = df["InvoiceDate"].dt.to_period("M").astype(str)
+    df["Year"] = df["InvoiceDate"].dt.year
+    df["Month"] = df["InvoiceDate"].dt.month
+    df["MonthName"] = df["InvoiceDate"].dt.month_name()
+    df["Day"] = df["InvoiceDate"].dt.day
+    df["Hour"] = df["InvoiceDate"].dt.hour
 
+    # Daily and monthly sales
+    df["DailySales"] = (
+        df.groupby("SaleDate")["TotalSales"].transform("sum")
+    )
+    df["MonthlySales"] = (
+        df.groupby("YearMonth")["TotalSales"].transform("sum")
+    )
     return df
+
+
+def summarize_by_product(df):
+    # Group by product details and aggregate key performance metrics
+    product_summary = (
+        df.groupby(["StockCode", "Description"], as_index=False)
+        .agg( TotalQuantity=("Quantity", "sum"),
+            TotalSales=("TotalSales", "sum"),
+        )
+        .sort_values(by="TotalSales", ascending=False) )
+    return product_summary
+
+def summarize_by_customer(df):
+    # Roll up sales data by customer ID to find top spenders
+    customer_summary = (
+        df.groupby("CustomerID", as_index=False)
+        .agg(
+            TotalOrders=("InvoiceNo", "nunique"),
+            TotalQuantity=("Quantity", "sum"),
+            TotalSales=("TotalSales", "sum"),
+        )
+        .sort_values(by="TotalSales", ascending=False)
+    )
+    return customer_summary
+
+
+def check_data_quality(df):
+    # Sanity check to make sure basic constraints are met before exporting
+    if df.empty:
+        print("Warning: The dataset is empty.")
+        return False
+
+    # Check for unexpected missing values in critical columns
+    missing_counts = df[["InvoiceNo", "TotalSales"]].isnull().sum()
+    if missing_counts.sum() > 0:
+        print("Warning: Found unexpected missing values in key fields.")
+        return False
+
+    print("Data validation passed successfully.")
+    return True
+def prepare_forecasting_data(df):
+    # Aggregate daily totals needed for time-series modeling
+    daily_summary = (
+        df.groupby("SaleDate", as_index=False)
+        .agg(TotalSales=("TotalSales", "sum"),
+            TotalQuantity=("Quantity", "sum"),
+            TotalOrders=("InvoiceNo", "nunique"),
+            UniqueCustomers=("CustomerID", "nunique"),
+            ReturnTransactions=("IsReturn", "sum"), )
+        .sort_values(by="SaleDate") )
+
+    # Convert to datetime and extract date features for trend/seasonality analysis
+    daily_summary["SaleDate"] = pd.to_datetime(daily_summary["SaleDate"])
+    
+    daily_summary["Year"] = daily_summary["SaleDate"].dt.year
+    daily_summary["Month"] = daily_summary["SaleDate"].dt.month
+    daily_summary["DayOfWeek"] = daily_summary["SaleDate"].dt.day_name()
+
+    return daily_summary
+def create_forecasting_dataset(df):
+    forecasting_df = (
+        df.groupby("SaleDate", as_index=False)
+        .agg(
+            TotalSales=("TotalSales", "sum"),
+            TotalQuantity=("Quantity", "sum"),
+            TotalOrders=("InvoiceNo", "nunique"),
+            UniqueCustomers=("CustomerID", "nunique"),
+            ReturnTransactions=("IsReturn", "sum"),
+        )
+        .sort_values("SaleDate")
+    )
+
+    forecasting_df["SaleDate"] = pd.to_datetime(
+        forecasting_df["SaleDate"]
+    )
+    forecasting_df["Year"] = forecasting_df["SaleDate"].dt.year
+    forecasting_df["Month"] = forecasting_df["SaleDate"].dt.month
+    forecasting_df["DayOfWeek"] = forecasting_df["SaleDate"].dt.day_name()
+
+    return forecasting_df
 def validate_cleaned_data(df):
     if df.empty:
         raise ValueError("No valid records remain after cleaning.")
-
+# Final list of columns we want to keep in our output
+    required_output_cols = [
+        "IsReturn",
+        "TotalSales",
+        "Year",
+        "Month",
+        "Day",
+        "Hour",
+        "SaleDate",
+        "YearMonth",
+        "DailySales",
+        "MonthlySales",
+    ]
     essential_cols = [
         "InvoiceNo",
         "StockCode",
