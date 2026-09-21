@@ -1,0 +1,47 @@
+Week: 2 (8 sep - 14 sep)
+
+Student: Harnoor Kaur
+Project: SalesInsight – SME Sales Analytics & Forecasting System
+Role: Project Manager
+
+Planned Work:
+- Understand the BIS305 project requirements and assessment criteria.
+- Select a suitable project topic with the team.
+- Discuss team roles and responsibilities.
+- Research the selected business problem and possible solution.
+- Start preparing the project proposal and project documentation.
+
+Completed Work:
+- Reviewed the available project options and selected Project 6: SalesInsight – SME Sales Analytics & Forecasting System.
+- Discussed the business problem of small retail businesses relying on spreadsheets for sales analysis.
+- Discussed the main proposed system features, including sales analytics, sales trends, product performance, customer purchasing patterns, sales forecasting, unusual sales change detection and business performance measurement.
+- Team roles and responsibilities were discussed:
+  Harnoor – Project Manager,
+  Tanbir – Scrum Master,
+  Mansha – Data/Backend Developer,
+  Simranjeet – Frontend/Analytics Developer.
+- Started organising the project using Jira and GitHub.
+- Discussed the initial product backlog and user stories.
+- Worked on the Project Proposal presentation.
+- Prepared slides covering the project background, problem statement, existing systems, proposed solution, project objectives, product backlog and project planning.
+- Worked on the WBS, Gantt chart, storyboards and system architecture sections of the proposal.
+- Helped organise the presentation structure and speaking responsibilities for the team.
+
+Obstacles and Solutions:
+- Initially, the team was unsure how to divide responsibilities among the four members.
+- We discussed each person's role and divided the project according to different responsibilities and system features.
+- There was some uncertainty about how to structure the product backlog, user stories and acceptance criteria. We discussed the requirements and continued refining the Jira stories.
+- Preparing the proposal required coordinating information from all team members, so regular communication was needed.
+
+Unfinished Work / Impact:
+- Some user stories and technical details were still being finalised.
+- The complete development approach and implementation details were not yet confirmed.
+- Some project documentation required further refinement before the final proposal submission.
+
+Next Week:
+Next Week:
+- Connect the sales forecasting feature to the main software.
+- Test it with the dataset.
+- Fix any errors.
+- Update Jira and GitHub.
+- Continue project documentation.
