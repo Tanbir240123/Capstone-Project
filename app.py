@@ -27,11 +27,13 @@ try:
     st.success("File processed successfully!")
 
     # Summary Metrics
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3, c4,c5 = st.columns(5)
     c1.metric("Original Rows", f"{stats['original_rows']:,}")
     c2.metric("Processed Rows", f"{stats['processed_rows']:,}")
     c3.metric("Rows Removed", f"{stats['removed_rows']:,}")
     c4.metric("Duplicates Dropped", f"{stats['duplicate_rows']:,}")
+    c5.metric( "Missing Values Handled", f"{stats['missing_values_handled']:,}"
+)
 
     st.divider()
 
