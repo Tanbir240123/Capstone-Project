@@ -1,0 +1,53 @@
+# Development Diary
+
+## Week: Sales Data Import and Preprocessing
+
+### My Role
+Data and Backend Developer
+
+### Work Completed
+- Created CSV file upload functionality using Streamlit.
+- Added validation for required sales-data columns.
+- Handled missing values and removed duplicate records.
+- Standardised quantities, prices, customer IDs and invoice dates.
+- Calculated total, daily and monthly sales.
+- Created product and customer summary datasets.
+- Prepared a forecasting and dashboard-ready dataset.
+- Added validation checks for the processed data.
+- Tested the pipeline using valid and invalid CSV files.
+
+### Challenges
+I experienced import errors when new functions were added to the data pipeline. I resolved them by checking function names, saving the files and restarting Streamlit. I also fixed a datetime error by converting `InvoiceDate` before using the pandas `.dt` accessor.
+
+### What I Learned
+I learned how to clean and transform a large CSV dataset using pandas, connect backend functions to a Streamlit interface, validate processed data and use GitHub branches and pull requests for teamwork.
+
+### Next Steps
+- Review the pull request with the team.
+- Merge the approved changes into the main branch.
+- Use the processed dataset for dashboard development and sales forecasting.
+⁠---
+
+## Week 2: Automatic Data Cleaning
+
+### My Role
+Data and Backend Developer
+
+### Work Completed
+- Handled missing product descriptions and country values.
+- Removed records missing essential transaction information.
+- Replaced missing customer IDs with a consistent placeholder.
+- Removed duplicate sales records.
+- Standardised customer IDs and cleaned text columns.
+- Validated the cleaned dataset.
+- Added a cleaning summary showing original rows, processed rows, removed rows, duplicates dropped and missing values handled.
+- Tested the cleaning process in the Streamlit application.
+
+### Challenges
+I encountered an error because the cleaning summary expected a `missing_values_handled` value that was not initially included in the pipeline statistics. I updated the statistics and restarted Streamlit to resolve the issue.
+
+### What I Learned
+I learned how to handle different types of missing data, remove duplicate records, standardise data formats and display cleaning results clearly in a Streamlit application.
+
+### Outcome
+The application successfully cleans uploaded sales data and displays a clear summary of the changes made.
