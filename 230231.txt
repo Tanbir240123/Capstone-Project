@@ -1,0 +1,11 @@
+Week 4
+
+This week, I worked on the initial design and planning of my assigned components for the SalesInsight project.
+
+My assigned components are the Dashboard Overview, Overall Business Performance Score, and Interactive Sales Trend Chart.
+
+I created the initial Dashboard Overview design in Figma. The dashboard includes key sales KPIs, sales trends, product performance, customer information, sales categories, and forecast information.
+
+I also created and updated Jira work items for my three assigned components and attached my Figma dashboard design as evidence of my work.
+
+My next step is to start implementing the Dashboard Overview and Interactive Sales Trend Chart using the project dataset and work on the calculation for the Overall Business Performance Score.
