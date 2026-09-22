@@ -1,8 +1,42 @@
-Week: 2 (8 sep - 14 sep)
+ Harnoor240001-patch-2
+Week:3 (15 sep - 22 sep)=======
+Week: 2 (8 sep - 14 sep)>>>>>>> main
 
 Student: Harnoor Kaur
 Project: SalesInsight – SME Sales Analytics & Forecasting System
 Role: Project Manager
+Harnoor240001-patch-2
+Jira Task: SCRUM-85 – Sales Forecasting
+
+Planned Work:
+Implement the automated sales forecasting feature using Python and integrate it with the SalesInsight software.
+
+Completed Work:
+- Set up Python 3.14.6 in Visual Studio Code.
+- Installed pandas, numpy, plotly, statsmodels, streamlit and openpyxl.
+- Developed the sales forecasting function using Exponential Smoothing.
+- Converted InvoiceDate into datetime format.
+- Calculated SalesAmount using Quantity × UnitPrice.
+- Aggregated sales data by day.
+- Generated future sales forecasts.
+- Added a Streamlit interface for uploading the Online Retail Excel dataset.
+- Added a forecast chart, predicted sales table, projected sales value and CSV export.
+- Tested the application using Streamlit.
+
+Obstacles and Solutions:
+- Python commands were initially not recognised in the terminal. Selected the correct Python interpreter and used the full Python path.
+- Missing Python packages caused import errors. Installed the required packages.
+- openpyxl was missing when uploading the Excel file. Installed openpyxl.
+- A Git merge conflict occurred in data-import.py. Resolved the conflict and kept the required Streamlit code.
+
+Unfinished Work / Impact:
+- Final integration of the forecasting feature with the team's complete SalesInsight application is still required.
+
+Next Week:
+- Integrate sales forecasting with the main SalesInsight application.
+- Test the feature with the team's cleaned dataset.
+- Do Sprint 3 development tasks.
+- Update Jira and GitHub with the completed work.
 
 Planned Work:
 - Understand the BIS305 project requirements and assessment criteria.
@@ -45,3 +79,4 @@ Next Week:
 - Fix any errors.
 - Update Jira and GitHub.
 - Continue project documentation.
+main
