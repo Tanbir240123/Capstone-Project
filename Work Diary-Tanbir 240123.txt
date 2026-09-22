@@ -1,0 +1,14 @@
+Week 1
+Created Jira and Github account
+Completed Jira setup along with creating first sprint, giving task to team members 
+Setup Github and setup persmissions
+Researched about the technology and software which are required in the product
+Helped team members to start with the project and complete first sprint
+Started backend coding
+
+Week 2
+Helped team members whenever they are struck
+Helping team members installing and setting up software
+Started the basic dashboard design
+Changed the plan from Software to Website so change in requirements
+Completed last sprint assigned new task to team memebers
