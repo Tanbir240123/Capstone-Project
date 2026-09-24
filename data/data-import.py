@@ -210,8 +210,6 @@ if data_stream is not None:
 
         st.success("Forecasting model trained successfully.")
 
-    except Exception as application_fault:
-        st.error(f"System execution failure: {application_fault}")
                 # ----------------------------------------------------
         # SCRUM-89
         # ----------------------------------------------------
