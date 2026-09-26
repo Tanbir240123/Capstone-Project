@@ -1,11 +1,16 @@
 import streamlit as st
-from src.data_pipeline import run_pipeline
+
+from src.data_pipeline import (
+    run_pipeline,
+    create_product_summary,
+    create_customer_summary,
+    create_forecasting_dataset
+)
 
 st.set_page_config(
     page_title="SalesInsight",
     page_icon="📊",
-    layout="wide",
-)
+    layout="wide",)
 
 st.title("SalesInsight")
 st.caption("Upload a sales CSV dataset to automatically validate, clean, and transform your data.")
@@ -13,8 +18,7 @@ st.caption("Upload a sales CSV dataset to automatically validate, clean, and tra
 uploaded_file = st.file_uploader(
     "Sales Data CSV",
     type=["csv"],
-    help="Dataset must contain standard retail columns (InvoiceNo, StockCode, Quantity, UnitPrice, etc.)",
-)
+    help="Dataset must contain standard retail columns (InvoiceNo, StockCode, Quantity, UnitPrice, etc.)",)
 
 if not uploaded_file:
     st.info("Upload a CSV file above to start processing.")
@@ -42,14 +46,25 @@ try:
     st.dataframe(df.head(100), use_container_width=True)
 
     csv_bytes = df.to_csv(index=False).encode("utf-8")
+    product_summary = create_product_summary(df)
+    customer_summary = create_customer_summary(df)
+
+    st.subheader("Product Summary")
+    st.dataframe(product_summary.head(100), width="stretch")
+    st.dataframe(customer_summary.head(100), width="stretch")
+    st.subheader("Customer Summary")
+    st.dataframe(customer_summary.head(100), width="stretch")
     st.download_button(
         label="Download Processed Data (.csv)",
         data=csv_bytes,
         file_name="processed_sales_data.csv",
         mime="text/csv",
         type="primary",
-    )
+)
+    forecasting_df = create_forecasting_dataset(df)
 
+    st.subheader("Forecasting and Dashboard Dataset")
+    st.dataframe(forecasting_df.head(100), width="stretch")
 except ValueError as err:
     st.error(str(err))
 except Exception as err:
