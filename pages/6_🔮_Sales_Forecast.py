@@ -404,48 +404,16 @@ with st.sidebar:
 
 
 # =========================================================
-# LOAD DATA
+# LOAD CLEANED DATA FROM HOME PAGE
 # =========================================================
 
-@st.cache_data
-def load_data():
-
-    file_path = "data/SalesInsight.xlsx"
-
-    df = pd.read_excel(
-        file_path,
-        skiprows=[1, 2]
+if "sales_df" not in st.session_state:
+    st.warning(
+        "⚠️ Please upload a sales dataset from the Home page first."
     )
+    st.stop()
 
-    df.columns = df.columns.astype(str).str.strip()
-
-    df["InvoiceDate"] = pd.to_datetime(
-        df["InvoiceDate"],
-        errors="coerce"
-    )
-
-    df["Sales Amount"] = pd.to_numeric(
-        df["Sales Amount"],
-        errors="coerce"
-    )
-
-    df["InvoiceNo"] = pd.to_numeric(
-        df["InvoiceNo"],
-        errors="coerce"
-    )
-
-    df = df.dropna(
-        subset=[
-            "InvoiceDate",
-            "Sales Amount",
-            "InvoiceNo"
-        ]
-    )
-
-    return df
-
-
-df = load_data()
+df = st.session_state["sales_df"].copy()
 
 
 # =========================================================
