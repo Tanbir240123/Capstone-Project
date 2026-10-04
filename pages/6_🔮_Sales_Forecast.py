@@ -13,6 +13,33 @@ st.set_page_config(
     layout="wide"
 )
 
+# ============================================================
+# SUBSCRIPTION ACCESS CONTROL
+# ============================================================
+
+is_authorized = bool(st.session_state.get("subscription_active", False))
+
+if not is_authorized:
+
+    st.title("🔒 Sales Forecasting")
+
+    st.warning("Subscription Required")
+
+    st.write(
+        "Please choose a SalesInsight subscription plan "
+        "to access Sales Forecasting."
+    )
+
+    if st.button(
+        label="💳 Browse Subscription Tiers",
+        use_container_width=True
+    ):
+        st.switch_page(
+            "pages/9_💳_Subscription.py"
+        )
+
+    st.stop()
+
 
 # =========================================================
 # SALESINSIGHT MODERN THEME
@@ -415,6 +442,32 @@ if "sales_df" not in st.session_state:
 
 df = st.session_state["sales_df"].copy()
 
+# =========================================================
+# FORECASTING DATA GUIDANCE
+# =========================================================
+
+chronological_records = df["InvoiceDate"].dropna()
+
+if not chronological_records.empty:
+
+    earliest_timestamp = chronological_records.min()
+    latest_timestamp = chronological_records.max()
+
+    calendar_months_span = (
+        (latest_timestamp.period - earliest_timestamp.period)
+        if hasattr(latest_timestamp, "period") else 
+        (latest_timestamp.year - earliest_timestamp.year) * 12 + (latest_timestamp.month - earliest_timestamp.month) + 1
+    )
+
+    st.info(
+        body=f"📊 Historical data available: {calendar_months_span} months "
+        f"({earliest_timestamp.strftime('%B %Y')} to {latest_timestamp.strftime('%B %Y')})."
+    )
+
+    st.warning(
+        body="💡 For more accurate future sales forecasting, "
+        "upload a minimum of 3 years (36 months) of historical sales data."
+    )
 
 # =========================================================
 # HEADER

@@ -12,6 +12,32 @@ st.set_page_config(
     layout="wide"
 )
 
+# ============================================================
+# SUBSCRIPTION ACCESS CONTROL
+# ============================================================
+
+is_authorized = bool(st.session_state.get("subscription_active", False))
+
+if not is_authorized:
+
+    st.title("🔒 Product Analysis")
+
+    st.warning("Subscription Required")
+
+    st.write(
+        "Please choose a SalesInsight subscription plan "
+        "to access Product Analysis."
+    )
+
+    if st.button(
+        label="💳 Browse Subscription Tiers",
+        use_container_width=True
+    ):
+        st.switch_page(
+            "pages/9_💳_Subscription.py"
+        )
+
+    st.stop()
 
 # --------------------------------------------------
 # CUSTOM PRODUCT ANALYSIS THEME
