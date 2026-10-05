@@ -1,0 +1,27 @@
+## Week 2: Group Roles and Dataset Exploration
+
+### My Role
+Data and Backend Developer
+
+### Work Completed
+- Discussed and agreed on each group member’s role and responsibilities.
+- Took responsibility for dataset selection and data preparation.
+- Searched Kaggle for CSV datasets suitable for our sales analytics project.
+- Downloaded and compared different datasets.
+- Imported the datasets into Orange to explore their columns and data types.
+- Checked for missing values and whether the datasets contained the information needed for our project.
+- Discussed dataset options with the team and selected the SalesInsight online retail dataset.
+
+### Challenges
+Some datasets did not contain the sales information needed for our planned features. I also experienced problems importing and displaying one dataset in Orange. I tried alternative files and checked their formats and columns.
+
+### What I Learned
+I learned how to compare datasets based on project requirements and use Orange to explore data before developing the application. I also learned the importance of agreeing on clear responsibilities within the team.
+
+### Outcome
+The group agreed on our roles, and we selected a suitable CSV dataset for the SalesInsight project.
+
+### Next Steps
+- Plan how to handle missing values and duplicate records.
+- Prepare the selected dataset for cleaning and preprocessing.
+- Begin developing the data import functionality.
