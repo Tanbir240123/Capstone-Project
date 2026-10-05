@@ -1,0 +1,30 @@
+---
+
+## Week 3: Sales Anomaly Detection
+
+### My Role
+Data and Backend Developer
+
+### Work Completed
+- Added the Sales Anomaly Detection page to the SalesInsight project.
+- Used cleaned sales data from the Home page to calculate daily sales totals.
+- Used a rolling average and standard deviation to identify unusual sales increases and decreases.
+- Added sliders to adjust the rolling window and anomaly threshold.
+- Included summary metrics, a sales chart with anomaly markers and a table of detected anomalies.
+- Saved the page in the project's `pages` folder.
+- Committed and published the code using GitHub Desktop.
+- Created pull request #17 for team review.
+
+### Challenges
+The VS Code terminal did not recognise the Git command, so I used GitHub Desktop to commit and publish my code. I initially created the file outside the `pages` folder and moved it into the correct location. I also changed the pull request's base branch to `main` to resolve the comparison issue.
+
+### What I Learned
+I learned how rolling averages and standard deviation can identify unusual sales patterns. I also gained experience adding a Streamlit page and using GitHub branches, commits and pull requests to share my contribution.
+
+### Outcome
+The anomaly detection code was uploaded to the `mansha-anomaly-detection` branch, and pull request #17 was opened. Testing and team review are still pending.
+
+### Next Steps
+- Test the page with the project dataset.
+- Check the chart, detected anomalies and adjustable settings.
+- Address team feedback and merge the approved changes.
