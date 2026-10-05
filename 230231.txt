@@ -1,11 +1,119 @@
-Week 4
+## Week 1: Team Formation and Project Setup
 
-This week, I worked on the initial design and planning of my assigned components for the SalesInsight project.
+### My Role
+Frontend/Analytics Developer
 
-My assigned components are the Dashboard Overview, Overall Business Performance Score, and Interactive Sales Trend Chart.
+### Work Completed
+- Formed the project team and discussed the SalesInsight project.
+- Discussed the main project objectives and requirements with team members.
+- Divided the project work and responsibilities among all team members.
+- Identified my role as Frontend/Analytics Developer.
+- Created and set up GitHub and Jira accounts for project collaboration and task management.
+- Became familiar with how the team would use Jira and GitHub during the project.
 
-I created the initial Dashboard Overview design in Figma. The dashboard includes key sales KPIs, sales trends, product performance, customer information, sales categories, and forecast information.
+### Challenges
+At the beginning, I was not fully familiar with the complete project structure and how we would divide the technical work between team members.
 
-I also created and updated Jira work items for my three assigned components and attached my Figma dashboard design as evidence of my work.
+### What I Learned
+I learned about my responsibilities in the SalesInsight project and how Jira and GitHub would be used to manage our group work.
 
-My next step is to start implementing the Dashboard Overview and Interactive Sales Trend Chart using the project dataset and work on the calculation for the Overall Business Performance Score.
+### Outcome
+The team was successfully formed, responsibilities were divided, and the basic project management tools were set up.
+
+### Next Steps
+- Understand my dashboard requirements.
+- Start planning the dashboard layout.
+- Identify the information and visualisations required for the dashboard.
+
+---
+
+# Week 2: Initial Dashboard Planning
+
+### My Role
+Frontend/Analytics Developer
+
+### Work Completed
+- Started planning the SalesInsight dashboard.
+- Identified the information that needed to appear on the dashboard.
+- Started creating the dashboard design using PowerPoint.
+- Planned sections for KPIs, sales trends, charts and business performance information.
+- Discussed my dashboard work with the team.
+- Tanbir suggested that **Figma would be a better option** for designing the dashboard prototype.
+- Decided to move from PowerPoint to Figma for the dashboard design.
+
+### Challenges
+Initially, I started designing the dashboard in PowerPoint because I was not aware that Figma would be a better tool for creating the prototype.
+
+### What I Learned
+I learned that Figma is more suitable for designing an interactive and professional dashboard prototype. I also learned more about how the dashboard should be structured.
+
+### Outcome
+I had an initial dashboard concept and decided to recreate and improve it using Figma.
+
+### Next Steps
+- Start creating the dashboard in Figma.
+- Improve the dashboard layout.
+- Add KPI cards, charts, filters and other required dashboard components.
+
+---
+
+# Week 3: Dashboard Design in Figma
+
+### My Role
+Frontend/Analytics Developer
+
+### Work Completed
+- Started creating the SalesInsight dashboard prototype in Figma.
+- Designed the overall dashboard layout.
+- Added and planned KPI cards for important sales information.
+- Designed the sales trend section.
+- Planned filters for interacting with the dashboard.
+- Worked on the Business Performance Score section.
+- Improved the design to make the dashboard simple and understandable for business users.
+- Reviewed the dashboard against the project requirements.
+
+### Challenges
+It took some time to understand how to organise all the required dashboard information in Figma while keeping the interface simple and user-friendly.
+
+### What I Learned
+I improved my Figma skills and learned how to convert project requirements into a visual dashboard prototype.
+
+### Outcome
+I completed the main dashboard design in Figma, which provided a visual reference for the development stage.
+
+### Next Steps
+- Start implementing the dashboard using code.
+- Understand the existing project structure.
+- Convert the Figma dashboard components into working features.
+
+---
+
+# Week 4: Dashboard Development and Coding
+
+### My Role
+Frontend/Analytics Developer
+
+### Work Completed
+- Started the coding and implementation stage of my dashboard work.
+- Took help and guidance from **Mansha and Harnoor** to understand how to start the coding process.
+- Became familiar with the structure of the SalesInsight project.
+- Started working with **VS Code, Python and Streamlit**.
+- Worked on understanding how dashboard components are implemented using code.
+- Started working with dashboard features related to my assigned responsibilities.
+- Ran and tested the SalesInsight application during development.
+- Continued learning how the code connects the sales data with dashboard visualisations.
+
+### Challenges
+As I was new to some parts of the coding and Streamlit implementation, I needed guidance from my team members to understand the project structure and how to begin implementing my dashboard.
+
+### What I Learned
+I learned how to open and run the SalesInsight project in VS Code and gained a better understanding of Python and Streamlit dashboard development. I also learned how team members can support each other during development.
+
+### Outcome
+I successfully started the implementation stage and gained a better understanding of how the dashboard design could be converted into a working application.
+
+### Next Steps
+- Continue developing my assigned dashboard components.
+- Test the dashboard functionality.
+- Fix any issues found during testing.
+- Continue updating Jira and GitHub with my progress.
