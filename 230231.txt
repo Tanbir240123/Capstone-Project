@@ -1,4 +1,4 @@
-## Week 1: Team Formation and Project Setup
+## Week 2: Team Formation and Project Setup
 
 ### My Role
 Frontend/Analytics Developer
@@ -27,7 +27,7 @@ The team was successfully formed, responsibilities were divided, and the basic p
 
 ---
 
-# Week 2: Initial Dashboard Planning
+# Week 3: Initial Dashboard Planning
 
 ### My Role
 Frontend/Analytics Developer
@@ -57,7 +57,7 @@ I had an initial dashboard concept and decided to recreate and improve it using 
 
 ---
 
-# Week 3: Dashboard Design in Figma
+# Week 4: Dashboard Design in Figma
 
 ### My Role
 Frontend/Analytics Developer
@@ -88,7 +88,7 @@ I completed the main dashboard design in Figma, which provided a visual referenc
 
 ---
 
-# Week 4: Dashboard Development and Coding
+# Week 5: Dashboard Development and Coding
 
 ### My Role
 Frontend/Analytics Developer
