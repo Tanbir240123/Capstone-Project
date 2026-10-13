@@ -1,82 +1,60 @@
- Harnoor240001-patch-2
-Week:3 (15 sep - 22 sep)=======
-Week: 2 (8 sep - 14 sep)>>>>>>> main
+BIS305 – SalesInsight Work Diary
 
-Student: Harnoor Kaur
 Project: SalesInsight – SME Sales Analytics & Forecasting System
-Role: Project Manager
-Harnoor240001-patch-2
-Jira Task: SCRUM-85 – Sales Forecasting
+Role: Project Manager / Developer
 
-Planned Work:
-Implement the automated sales forecasting feature using Python and integrate it with the SalesInsight software.
+Week 2 – 8 September to 14 September 2026
 
-Completed Work:
-- Set up Python 3.14.6 in Visual Studio Code.
-- Installed pandas, numpy, plotly, statsmodels, streamlit and openpyxl.
-- Developed the sales forecasting function using Exponential Smoothing.
-- Converted InvoiceDate into datetime format.
-- Calculated SalesAmount using Quantity × UnitPrice.
-- Aggregated sales data by day.
-- Generated future sales forecasts.
-- Added a Streamlit interface for uploading the Online Retail Excel dataset.
-- Added a forecast chart, predicted sales table, projected sales value and CSV export.
-- Tested the application using Streamlit.
+Planned work: Understand the project requirements, contribute to initial planning and help organise the project tasks.
 
-Obstacles and Solutions:
-- Python commands were initially not recognised in the terminal. Selected the correct Python interpreter and used the full Python path.
-- Missing Python packages caused import errors. Installed the required packages.
-- openpyxl was missing when uploading the Excel file. Installed openpyxl.
-- A Git merge conflict occurred in data-import.py. Resolved the conflict and kept the required Streamlit code.
+Work completed:
+I reviewed the requirements for Project 6, SalesInsight, which aims to help small businesses analyse their sales data and make better business decisions. I contributed to initial project planning, discussed the main system features with my team and helped organise the project requirements and backlog. I also supported the preparation of the initial project proposal and the planning of tasks in Jira.
 
-Unfinished Work / Impact:
-- Final integration of the forecasting feature with the team's complete SalesInsight application is still required.
+Challenges:
+At the beginning, the team needed to clarify responsibilities, task descriptions and acceptance criteria. We discussed the requirements and divided the work according to our roles.
 
-Next Week:
-- Integrate sales forecasting with the main SalesInsight application.
-- Test the feature with the team's cleaned dataset.
-- Do Sprint 3 development tasks.
-- Update Jira and GitHub with the completed work.
+Plan for next week:
+Continue developing the project proposal, clarify user stories and support the team in starting the application development.
 
-Planned Work:
-- Understand the BIS305 project requirements and assessment criteria.
-- Select a suitable project topic with the team.
-- Discuss team roles and responsibilities.
-- Research the selected business problem and possible solution.
-- Start preparing the project proposal and project documentation.
+Week 3 – 15 September to 22 September 2026
 
-Completed Work:
-- Reviewed the available project options and selected Project 6: SalesInsight – SME Sales Analytics & Forecasting System.
-- Discussed the business problem of small retail businesses relying on spreadsheets for sales analysis.
-- Discussed the main proposed system features, including sales analytics, sales trends, product performance, customer purchasing patterns, sales forecasting, unusual sales change detection and business performance measurement.
-- Team roles and responsibilities were discussed:
-  Harnoor – Project Manager,
-  Tanbir – Scrum Master,
-  Mansha – Data/Backend Developer,
-  Simranjeet – Frontend/Analytics Developer.
-- Started organising the project using Jira and GitHub.
-- Discussed the initial product backlog and user stories.
-- Worked on the Project Proposal presentation.
-- Prepared slides covering the project background, problem statement, existing systems, proposed solution, project objectives, product backlog and project planning.
-- Worked on the WBS, Gantt chart, storyboards and system architecture sections of the proposal.
-- Helped organise the presentation structure and speaking responsibilities for the team.
+Planned work: Develop the project proposal and begin working on the main application requirements and features.
 
-Obstacles and Solutions:
-- Initially, the team was unsure how to divide responsibilities among the four members.
-- We discussed each person's role and divided the project according to different responsibilities and system features.
-- There was some uncertainty about how to structure the product backlog, user stories and acceptance criteria. We discussed the requirements and continued refining the Jira stories.
-- Preparing the proposal required coordinating information from all team members, so regular communication was needed.
+Work completed:
+I contributed to project planning and the preparation of presentation materials, including the project background, objectives, work breakdown structure, system architecture and user interface flow. I helped coordinate the team’s progress and reviewed the Jira backlog to keep track of assigned tasks. I also considered how the sales dataset would support product analysis, customer insights, forecasting and dashboard development.
 
-Unfinished Work / Impact:
-- Some user stories and technical details were still being finalised.
-- The complete development approach and implementation details were not yet confirmed.
-- Some project documentation required further refinement before the final proposal submission.
+Challenges:
+Some Jira stories needed clearer descriptions and acceptance criteria. Coordination between the data preparation and dashboard development tasks also required attention. I communicated with the team to clarify the requirements and dependencies.
 
-Next Week:
-Next Week:
-- Connect the sales forecasting feature to the main software.
-- Test it with the dataset.
-- Fix any errors.
-- Update Jira and GitHub.
-- Continue project documentation.
-main
+Plan for next week:
+Continue developing the analytics features, assist with dashboard integration and prepare evidence of completed work for the next presentation.
+
+Week 4 – 22 September to 28 September 2026
+
+Planned work: Contribute to the sales analytics and dashboard features, support team integration and prepare the Iteration 2 presentation.
+
+Work completed:
+I worked on the top- and low-performing products functionality under SCRUM-67. I also helped Simranjeet with dashboard integration and the Welcome/Home page. I supported the team in connecting different parts of the application and reviewed the presentation content to show the project's progress and Jira evidence.
+
+The team made progress on the dashboard overview, sales performance KPIs, data validation, sales trends, product analysis and customer analytics.
+
+Challenges:
+Integrating code from different team members required additional coordination. GitHub workflow difficulties and temporary file sharing made it more important to check that the separate components worked together correctly.
+
+Plan for next week:
+Continue developing the forecasting functionality, improve the account and subscription workflow, test the connection between uploaded sales data and analytics pages, and address any integration issues.
+
+Week 5 – 29 September to 5 October 2026
+
+Planned work: Continue development of sales forecasting, improve application integration, subscription workflow, and support preparation for the prototype demonstration.
+
+Work completed:
+I worked on the sales forecasting feature under SCRUM-85 and supported its integration into the SalesInsight application. I reviewed how historical sales data could be used to generate future sales predictions and considered the importance of having enough historical data for more reliable forecasts. The system recommends approximately three years of historical data while allowing users with shorter datasets to continue exploring the application.
+
+I also helped test the application Subscription workflow, review navigation and investigate technical issues involving Streamlit, data upload and integration. I contributed to preparing the prototype presentation and documenting the functionality developed by the team.
+
+Challenges:
+Python environment and package issues, page navigation and integration between different modules required troubleshooting. These issues highlighted the importance of testing the complete workflow rather than testing each feature separately.
+
+Plan for next week:
+Continue integration and testing, review documentation and prepare the final presentation with actual prototype screenshots and demonstration evidence.
