@@ -1,27 +1,150 @@
-## Week 2: Group Roles and Dataset Exploration
+SalesInsight – Development Diary
 
-### My Role
+Week 1: Group Roles and Dataset Exploration
+
+My Role
+
 Data and Backend Developer
 
-### Work Completed
-- Discussed and agreed on each group member’s role and responsibilities.
-- Took responsibility for dataset selection and data preparation.
-- Searched Kaggle for CSV datasets suitable for our sales analytics project.
-- Downloaded and compared different datasets.
-- Imported the datasets into Orange to explore their columns and data types.
-- Checked for missing values and whether the datasets contained the information needed for our project.
-- Discussed dataset options with the team and selected the SalesInsight online retail dataset.
+Work Completed
 
-### Challenges
-Some datasets did not contain the sales information needed for our planned features. I also experienced problems importing and displaying one dataset in Orange. I tried alternative files and checked their formats and columns.
+* Participated in group discussions to decide each team member’s role and responsibilities.
+* Took responsibility for dataset selection and data preparation.
+* Searched Kaggle for suitable sales datasets in CSV format.
+* Downloaded and compared different datasets based on our project requirements.
+* Used Orange Data Mining to explore the datasets, including their columns, data types and missing values.
+* Checked whether the datasets contained the required information for sales, product and customer analysis.
+* Discussed the available datasets with my group members.
+* Helped select the Online Retail dataset for the SalesInsight project.
 
-### What I Learned
-I learned how to compare datasets based on project requirements and use Orange to explore data before developing the application. I also learned the importance of agreeing on clear responsibilities within the team.
+Challenges
 
-### Outcome
-The group agreed on our roles, and we selected a suitable CSV dataset for the SalesInsight project.
+Some datasets did not contain all the information required for our planned analytics features. I also experienced problems importing and displaying a dataset in Orange. I checked the file formats and tested alternative datasets to resolve these issues.
 
-### Next Steps
-- Plan how to handle missing values and duplicate records.
-- Prepare the selected dataset for cleaning and preprocessing.
-- Begin developing the data import functionality.
+What I Learned
+
+I learned how to search for suitable datasets, compare their features and explore data using Orange. I also understood the importance of selecting a suitable dataset before starting development and having clear responsibilities within the team.
+
+Outcome
+
+Our group finalised the team roles and selected a suitable sales dataset for the SalesInsight project.
+
+Next Steps
+
+* Identify the required columns and data types.
+* Plan data cleaning and preprocessing.
+* Start developing the data import functionality using Python.
+
+
+Week 2: Sales Data Import and Preprocessing
+
+My Role
+
+Data and Backend Developer
+
+Work Completed
+
+* Used Python and Pandas in Visual Studio Code to develop the sales data processing functionality.
+* Worked on the data pipeline to import CSV sales datasets.
+* Created file upload functionality using Streamlit.
+* Added validation to check whether required sales columns were available.
+* Converted invoice dates, quantities and prices into suitable formats.
+* Created additional fields to calculate total sales and analyse daily and monthly performance.
+* Prepared sales, product, customer and transaction summaries for the analytics dashboard.
+* Added validation checks for the processed dataset.
+* Tested the application using valid and invalid CSV files.
+* Used GitHub to manage and submit my code for team review.
+
+Challenges
+
+I experienced Python import errors after adding new functions to the data pipeline. I checked the function names, corrected the code and restarted Streamlit. I also encountered a datetime error when processing invoice dates, which I resolved by converting the InvoiceDate column into a proper datetime format.
+
+What I Learned
+
+I improved my understanding of Python, Pandas and Streamlit. I learned how to import datasets, validate columns, convert data types and prepare information for analytics. I also gained experience testing backend functionality and managing code through GitHub.
+
+Outcome
+
+The data import and preprocessing functionality was developed and tested. The processed data could be used for sales calculations, dashboard development and forecasting.
+
+Next Steps
+
+* Improve automatic data cleaning.
+* Handle missing values and duplicate records.
+* Add a cleaning summary to the application.
+
+
+Week 3: Automatic Data Cleaning
+
+My Role
+
+Data and Backend Developer
+
+Work Completed
+
+* Developed and improved automatic data cleaning functionality using Python and Pandas.
+* Checked the dataset for missing and duplicate records.
+* Handled missing product descriptions and country values.
+* Removed records with missing essential transaction information.
+* Replaced missing customer IDs with a consistent placeholder.
+* Removed duplicate sales records.
+* Standardised customer IDs and cleaned text columns.
+* Added validation checks to confirm that the cleaned dataset was suitable for processing.
+* Created a cleaning summary showing original rows, processed rows, removed rows, duplicates removed and missing values handled.
+* Connected the cleaning functionality to the Streamlit application.
+* Tested the cleaning process and reviewed the displayed results.
+
+Challenges
+
+I faced an error because the cleaning summary expected a missing_values_handled value that was not included in the pipeline statistics. I checked the Python functions, updated the statistics and restarted Streamlit. After troubleshooting, the cleaning summary displayed correctly.
+
+What I Learned
+
+I learned how to handle missing data, remove duplicate records and standardise information using Pandas. I also improved my debugging skills and learned how to display data quality information in a Streamlit application.
+
+Outcome
+
+The automatic data cleaning functionality was successfully tested. The application was able to process uploaded sales data and display a summary of the cleaning results.
+
+Next Steps
+
+* Review the processed dataset with the team.
+* Support the integration of cleaned data into the dashboard.
+* Continue developing additional sales analytics features.
+
+Week 4: Sales Anomaly Detection
+
+My Role
+
+Data and Backend Developer
+
+Work Completed
+
+* Developed a Sales Anomaly Detection page for the SalesInsight application using Python and Streamlit.
+* Used cleaned sales data from the Home page to calculate daily sales totals.
+* Implemented a rolling average and standard deviation method to identify unusual increases and decreases in sales.
+* Added interactive sliders to adjust the rolling window and anomaly detection threshold.
+* Created summary metrics and a sales chart with markers for detected anomalies.
+* Added a table to display unusual sales records.
+* Saved the anomaly detection Python file in the project’s pages folder.
+* Used GitHub Desktop to commit and publish my code.
+* Created the mansha-anomaly-detection branch and opened pull request #17 for team review.
+
+Challenges
+
+The VS Code terminal did not recognise the Git command, so I used GitHub Desktop to commit and publish my changes. Initially, I created the anomaly detection file outside the correct folder. I moved it into the pages folder and corrected the project structure. I also experienced a branch comparison issue while creating the pull request, which I resolved by changing the base branch to main.
+
+What I Learned
+
+I learned how rolling averages and standard deviation can be used to detect unusual sales patterns. I also gained experience creating interactive Streamlit pages, organising Python project files, troubleshooting GitHub issues and submitting work through pull requests.
+
+Outcome
+
+The Sales Anomaly Detection feature was developed and uploaded to the mansha-anomaly-detection branch. Pull request #17 was created successfully. Final testing and team review were still pending.
+
+Next Steps
+
+* Test the anomaly detection feature using the project dataset.
+* Verify that the chart, summary metrics and detected anomalies display correctly.
+* Review team feedback and fix any remaining issues.
+* Merge the feature into the main project after approval.
