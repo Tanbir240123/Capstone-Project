@@ -116,3 +116,40 @@ I successfully started the implementation stage and gained a better understandin
 - Test the dashboard functionality.
 - Fix any issues found during testing.
 - Continue updating Jira and GitHub with my progress.
+Week 6: Dashboard Implementation and Testing
+
+My Role
+
+Frontend/Analytics Developer
+
+Work Completed
+
+Continued working on the SalesInsight dashboard implementation.
+
+Worked on my assigned dashboard components, including the Dashboard Overview, Business Performance Score and Interactive Sales Trend Chart.
+
+Used VS Code, Python and Streamlit to work with the dashboard.
+
+Ran the application to check whether the dashboard components were working correctly.
+
+Checked how sales data was displayed in the dashboard charts and KPI sections.
+
+Made improvements to the dashboard layout and presentation.
+
+Tested dashboard functionality and identified issues that needed improvement.
+
+Worked with team members to make sure my dashboard components fitted correctly with the overall SalesInsight system.
+
+Updated my project progress and continued working with GitHub and Jira.
+
+Challenges
+
+One challenge during Week 6 was making sure that the dashboard components worked correctly with the project data. I also needed to understand some parts of the existing code before making changes. Testing helped me identify issues and understand how different parts of the dashboard were connected.
+
+What I Learned
+
+I improved my understanding of Python and Streamlit and learned more about how frontend dashboard components connect with sales data. I also gained more confidence in running, testing and making changes to the project code.
+
+Outcome
+
+By the end of Week 6, I had made further progress on my assigned dashboard components and improved my understanding of the working SalesInsight application. The dashboard was moving from the initial design and development stage towards a more complete and testable version.
